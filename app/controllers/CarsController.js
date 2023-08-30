@@ -76,9 +76,9 @@ export class CarsController {
             const formData = getFormData(form)
             carsService.editCar(formData, carId)
             console.log('editing car')
-
             // @ts-ignore
             form.reset()
+            // @ts-ignore
             bootstrap.Collapse.getOrCreateInstance('#carFormCollapse').hide()
         } catch (error) {
             Pop.error(error.message)
